@@ -1,0 +1,30 @@
+class Calculator {
+    constructor(value = 0) {
+        this.value = value;
+    }
+
+    add(n) {
+        this.value += n;
+        return this;
+    }
+
+    multiply(n) {
+        this.value *= n;
+        return this;
+    }
+
+    subtract(n) {
+        this.value -= n;
+        return this;
+    }
+
+    result() {
+        return this.value;
+    }
+}
+
+const calc = new Calculator();
+
+console.log(
+    calc.add(5).multiply(2).subtract(3).result()
+);
