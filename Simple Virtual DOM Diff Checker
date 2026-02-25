@@ -1,0 +1,19 @@
+function diff(oldObj, newObj) {
+    const changes = {};
+
+    for (let key in newObj) {
+        if (oldObj[key] !== newObj[key]) {
+            changes[key] = {
+                old: oldObj[key],
+                new: newObj[key]
+            };
+        }
+    }
+
+    return changes;
+}
+
+const oldState = { name: "Anshu", age: 20 };
+const newState = { name: "Anshu", age: 21 };
+
+console.log(diff(oldState, newState));
